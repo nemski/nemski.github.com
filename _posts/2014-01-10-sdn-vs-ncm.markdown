@@ -1,0 +1,34 @@
+---
+layout: post
+title: Software Defined Network vs. Network Configuration Management
+date: 2014-01-10 00:00:00
+---
+
+I was watching a video from PuppetConf 2013,&nbsp;[Managing Cisco Devices Using Puppet](http://puppetlabs.com/presentations/managing-cisco-devices-using-puppet), which described how a puppet agent could be loaded on a Switch or Router using a new feature coming soon to Cisco devices called onePK API (Firewalls is an unknown, UCS is not yet on the roadmap).&nbsp;The API is designed to provide transparent support for integration with Cisco devices, which will work across all platforms. Nexus support is due to be released early this year.
+
+What's important to understand is this is not Software Defined Networking (SDN) but rather a Configuration Management system. It will still be an important tool for managing networks in the future by providing:
+
+*   Automated provisioning of services
+*   Centralised repository and version control of configurations
+*   Autonomous routing and forwarding decisions
+*   A source of truth for network configuration
+*   Simplified configuration via a single interface (Puppet or other)
+
+In the past network configuration management tools have only provided a centralised repository and automated provisioning but at great expense. Modern configuration management tools like puppet, when integrated with networking equipment, can provide a much richer set of features.
+
+SDN on the other hand provides all this as well as:
+
+*   Centralised analytical and reporting services
+*   Centralised configuration
+*   Centralised routing and forwarding decisions&nbsp;based on the current network status
+
+but with added cost and complexity. While SDN promises to be a new fad in the IT sector, configuration management is likely to provide a much better fit for most networks. Using this Cisco example, the implementation is significantly lessened by the ability to do an in place upgrade of the existing infrastructure.
+
+When Google embarked on a SDN implementation, one of the first in the world and certainly the largest, they designed and built their own Switch Stacks, scaling up to 128 10Gb ethernet ports, and implemented OpenFlow for Forwarding Table configuration and Quagga for Routing Table configuration. The result was WAN link utilisation near 100%, in comparison to the recommended 50%. This was cost effective for them on their scale and provided significant gains for their use case, the same cannot be said for most environments.
+
+Puppet configuration management on the other hand is effectively free and likely to provide more tangible benefits. Utilising this system will require a change in process for how changes to the configuration are implemented but the network architecture itself will not change and it's unlikely the underlying hardware will require anything more than a software upgrade (which in Cisco land requires an active support contract).
+
+Additonal reading:
+
+[B4: Experience with a Globally-Deployed](http://cseweb.ucsd.edu/~vahdat/papers/b4-sigcomm13.pdf)
+[Software Deﬁned WAN](http://cseweb.ucsd.edu/~vahdat/papers/b4-sigcomm13.pdf)
