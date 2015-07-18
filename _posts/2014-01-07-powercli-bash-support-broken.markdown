@@ -10,30 +10,43 @@ Invoke-VMScript is a "cmdlet" that allows you to run commands on the remote host
 
 I've known for a long time PowerCLI's Invoke-VMScript support for bash was buggy but today I've established it is FUBAR. Up until today I've discovered two common bash commands that behave unexpectedly when run from Invoke-VMScript.
 
-> ( exit 1 ); echo $?
+{% highlight bash %}
+( exit 1 ); echo $?
+{% endhighlight %}
 
 This will return 0 from Invoke-VMScript, when it should return the value given to exit in the sub-script (1 in this case). When I pasted this to VMWare community forum (the supported method for logging bugs since we don't have the appropriate contract to log a ticket against PowerCLI), and bugged their PowerCLI twitter account for a response, I was told to use the "ExitCode" Object returned by Invoke-VMScript and I went on my merry way.
 
-> [[ $(/bin/true) ]] || echo TRUE
+{% highlight bash %}
+[[ $(/bin/true) ]] || echo TRUE
+{% endhighlight %}
 
 This should return TRUE always, but when run from Invoke-VMScript we get:
 
-> bash: -c: line 0: syntax error near `]]'
-> bash: -c: line 0: `[[ ]] || echo TRUE'
+{% highlight bash %}
+bash: -c: line 0: syntax error near `]]'
+bash: -c: line 0: `[[ ]] || echo TRUE'
+{% endhighlight %}
 
 Simply assigning a command output to a variable and echoing it also doesn't work.
 
-> A=$(grep&nbsp;alias ~/.bashrc |tail -1); echo $A
+{% highlight bash %}
+A=$(grep alias ~/.bashrc |tail -1); echo $A
+{% endhighlight %}
 
 This returns nothing. Running 'ps -ef' while it's executing reveals what I believe to be the core of all these issues:
 
-> /bin/bash -c bash &gt; /tmp/vmware-root/powerclivmware255 2&gt;&amp;1 -c "A=alias mv='mv -i'; echo ; sleep 30"
+{% highlight bash %}
+/bin/bash -c bash > /tmp/vmware-root/powerclivmware255 2>&1 \
+-c "A=alias mv='mv -i'; echo ; sleep 30"
+{% endhighlight %}
 
 The way it's been implemented, it appears to be executing parts of the code one at a time, rather than the whole script in its entirety. Even when we use backticks (`) instead of $() we get the same results. This makes anything but the most basic bash commands useless.
 
 Last example, $! doesn't work:
 
-> /bin/true &amp; echo $!
+{% highlight bash %}
+/bin/true && echo $!
+{% endhighlight %}
 
 This should return the PID of the command we spawned (/bin/true in this case) but again we get nada.
 
