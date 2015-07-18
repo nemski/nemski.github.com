@@ -14,3 +14,8 @@ github_username:  nemski
 markdown: kramdown
 
 timezone: "Australia/Sydney"
+
+analytics :
+  provider : google
+  google :
+    tracking_id : 'UA-46810553-2'
