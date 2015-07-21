@@ -2,13 +2,14 @@
 title: Sysadmin 4 lyfe
 email: therealpatrobinson@gmail.com
 description: >
-  I am a System Administrator/DevOps Engineer with experience in automation,
-  Unix systems and programming. This blog covers various issues I encounter
+  This blog covers various issues I encounter
   and the (sometimes creative) solutions I apply.
 baseurl: ""
 url: "http://nemski.thematrix.local" # the base hostname & protocol for your site
 twitter_username: DrNemski
 github_username:  nemski
+about_me: >
+  I'm a Development Operations Engineer (i.e. Systems Administrator) with experience in Unix, Puppet, VMware and Programming in Bash, Perl and Ruby. My ramblings are usually loosely related to these topics. I also enjoy dabling in whatever new technology I see as relevant. I try not to talk about the latest "fad" in Technology, unless it's to explain how it relates to day-to-day workings of a sysadmin. I also try not to target to the lowest common denominator.
 
 # Build settings
 markdown: kramdown
@@ -19,3 +20,9 @@ analytics :
   provider : google
   google :
     tracking_id : 'UA-46810553-2'
+
+# theme settings
+header-img: img/home-bg.jpg
+highlighter: pygments
+permalink: pretty
+paginate: 5
