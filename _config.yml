@@ -23,3 +23,5 @@ header-img: img/home-bg.jpg
 highlighter: pygments
 permalink: pretty
 paginate: 5
+gems:
+  - jekyll-redirect-from

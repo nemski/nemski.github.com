@@ -1,6 +1,7 @@
 ---
 layout: post
 title: WIP is the silent killer
+redirect_from: /2015/10/01/wip-is-the-silent-killer/
 ---
 
 I started my career in IT seven years ago in a fairly large Managed Services Provider (MSP) providing support for banks, hospitals and police stations. It felt good to be on the front line most of that time, knowing that what I was doing was impacting the ability of organisations to respond to the most urgent needs of people all around the country. Within the few years in my first job I felt truly valuable at, I found myself romanticising the importance of my role and the vigorous structure that existed to enable me to do my job. A couple of key moments for me from those earlier years include helping Geelong hospital get their phones and computers back online the day after Black Saturday when an unrelated facilities malfunction took out their core switch, while juggling two other critical issues; and being on a phone call with a Big Four bank in which they threatened to tear up our contract if we didn't get them back online in the next 12 hours, as we'd shipped them one incorrect part and two that were dead on arrival.
