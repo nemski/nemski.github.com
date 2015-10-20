@@ -1,0 +1,12 @@
+---
+layout: post
+title: Being on-call
+---
+
+I don't quite remember the first time I was ever on-call, but I remember a few hairy moments. I can remember the panic rising in my body; the frantic nature of my troubleshooting; the feeling of incompetence.
+
+I've not been on-call since June, three months of good nights rest (ok two, my wife had a baby recently), three months of not worrying where my phone was. It was actually really nice to get away from that for a bit. My new job has a much longer rotation for being on-call too; after this rotation I won't be on-call for another three months. Also we have semi-follow the sun support with eight hours coverage overnight.
+
+This time round, even though I am still very new to the systems I support and learning the intricate details of each application and it's interactions, I've found myself a lot more confident. Even when I know I've taken a little longer than necessary to solve a problem, I feel confident that that is normal for someone without as much experience. I practiced a little before I started my stint, looking at NewRelic graphs and getting familiar with what an Apdex was (As a side note, NewRelic has to be some of the most awesome application level monitoring I've ever seen. In my previous roles I build monitoring systems as a day job and the interface and analytics of NewRelic shits all over anything I've ever seen before); running Splunk queries and following along some incidents from start to finish.
+
+But being confident I don't think is enough to make for a smooth experience, you have to be enabled and empored to act by the business you support (whether that be the company you work for or a customer). Just today I was on the phone to a service provider about some intermittent network failures we were experiencing. They advised to failover the firewall as they were seeing some errors on the Primary. With a simple verbal confirmation from them that this was a non-disruptive failover, I asked them to go ahead with it; not just because I was confident this was the right decision, but because I felt my colleagues and managers would have my back. I was enabled (I had the appropriate access), confident (I felt this was the right solution based on the information I had) and empored (I felt I had authority to make the call).
