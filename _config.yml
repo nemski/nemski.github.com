@@ -20,8 +20,9 @@ google_analytics_id: 'UA-46810553-2'
 
 # theme settings
 header-img: img/home-bg.jpg
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
 paginate: 5
 gems:
   - jekyll-redirect-from
+  - jekyll-paginate
