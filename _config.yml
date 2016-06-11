@@ -5,7 +5,7 @@ description: >
   This blog covers various issues I encounter
   and the (sometimes creative) solutions I apply.
 baseurl: ""
-url: "http://nemski.github.io" # the base hostname & protocol for your site
+url: "http://patrobinson.github.io" # the base hostname & protocol for your site
 twitter_username: DrNemski
 github_username:  patrobinson
 about_me: >
