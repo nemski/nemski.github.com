@@ -56,7 +56,7 @@ This article is a mixture of facts and personal opinions. Some are justified, bu
 > Docker applications should be run in auto-scaling groups. (Note: We’re not fully there yet).
 > Whenever an instance is crashed, it’s automatically replaced within 5 minutes. No manual action required. Self healing.
 
-Ok now I understand why the author is upset. Wow, yeah, don't do that. I mean we don't even setup servers that way anymore let alone Docker containers. This is a good lesson to learn, something to be trialled out not used in production for 12 different applications before finding out.
+Ok now I understand why the author is upset. This is a good lesson to learn, something to be trialled out not used in production for 12 different applications before finding out.
 
 > The orchestration systems to achieve that currently do not exist. (That’s where Nomad/Mesos/Kubernetes will eventually come in, there are not good enough in their present state).
 
@@ -75,6 +75,13 @@ There are a number of valid problems with Docker raised by the author.
 
 But I'm optimistic that it's possible to overcome these all in the short and long term.
 
+## Edit 6/11/16
+
+Lots of feedback on reddit about my post, which I love. There were a couple of points I probably didn't make clear enough so here goes.
+
+I was not intending in anyway to be condescending to the author of the original post, Thehftguy. I apologise if this has caused any offence.
+
+My intent was to show how I consider Docker to be production ready for our organisation (because we are using it), but to concede there are a number of problems with it. Production ready means different things to different organisations, it's important that each makes their own decision. I'm not trying to advocate that Docker is production ready for everybody, it's not. I am trying to give people all the information they need to make the decision themselves by correcting some of the factual innacuracies and misleading statements in Thehftguy's post.
 
 [1]: https://lwn.net/Articles/327738/
 [2]: https://docs.docker.com/engine/userguide/storagedriver/selectadriver/
