@@ -4,7 +4,7 @@ title: "Docker in Production: A retort"
 date: 2016-11-05 00:00:00
 ---
 
-The internet has been a wash with a well written article about the dangers of running Docker in production today. [Docker in Production: A History of Failure](https://thehftguy.wordpress.com/2016/11/01/docker-in-production-an-history-of-failure/).
+The internet has been awash with a well written article about the dangers of running Docker in production today. [Docker in Production: A History of Failure](https://thehftguy.wordpress.com/2016/11/01/docker-in-production-an-history-of-failure/).
 
 The piece was well written and touched on the many challenges of running Docker in production today. However towards the end it tailed off into a rant filled with rhetoric that was a knee jerk reaction to a problem many IT folks have experienced: new and shiny does not bring home the bacon, plain and boring does.
 
