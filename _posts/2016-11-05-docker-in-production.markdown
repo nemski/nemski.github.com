@@ -12,7 +12,7 @@ So let me try to retort the claims in this article from my experience of running
 
 ## Docker Issue: Breaking changes and regressions
 
-This is a well documented problem with Docker, one which Redhat, Google are trying to conteract with the Open Container Initiative (OCI). There is even talk they may fork Docker.
+This is a well documented problem with Docker, one which Redhat, Google are trying to counteract with the Open Container Initiative (OCI). There is even talk they may fork Docker.
 It's good that there is open debate about moving Docker towards a standardised stable API and away from a monopoly driven by the goals of one company.
 
 So the point is valid, but there are some big names invested in solving it, so I'm optimistic we'll see some stability in the future.
@@ -56,7 +56,7 @@ This article is a mixture of facts and personal opinions. Some are justified, bu
 > Docker applications should be run in auto-scaling groups. (Note: We’re not fully there yet).
 > Whenever an instance is crashed, it’s automatically replaced within 5 minutes. No manual action required. Self healing.
 
-Ok now I understand why the author is upset. This is a good lesson to learn, something to be trialled out not used in production for 12 different applications before finding out.
+Ok now I understand why the author is upset. This is a good lesson to learn, something to be tried out, not used in production for 12 different applications before finding out.
 
 > The orchestration systems to achieve that currently do not exist. (That’s where Nomad/Mesos/Kubernetes will eventually come in, there are not good enough in their present state).
 
