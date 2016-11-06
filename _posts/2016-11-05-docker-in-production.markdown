@@ -12,10 +12,12 @@ So let me try to retort the claims in this article from my experience of running
 
 ## Docker Issue: Breaking changes and regressions
 
-This is a well documented problem with Docker, one which Redhat, Google are trying to conteract with the Open Container Initiative (OCI). There is even talk they may fork Docker.
-It's good that there is open debate about moving Docker towards a standardised stable API and away from a monopoly driven by the goals of one company.
+Docker maintains API versioning to support backwards compatibility. However there is a lack of long term support for docker engine[1].
 
-So the point is valid, but there are some big names invested in solving it, so I'm optimistic we'll see some stability in the future.
+There is also much debate about how Docker maintains the runtime environment and image formats. Since the engine is rather monolithic, the runtime and image formats change at a great rate. This is something Redhat and Google are trying to conteract with the Open Container Initiative (OCI). There is even talk they may fork Docker.
+It's good that there is open debate about moving Docker towards a standardised stable format and away from a monopoly driven by the goals of one company.
+
+So the point is valid but misleading, the only breaking changes that exist in Docker are in the internal implementation and there are some big names invested in splitting those internal implementations into open standards.
 
 ## Docker Issue: Can’t clean old images
 
@@ -27,7 +29,7 @@ I was surprised I'd never experienced this issue before. That being said I've be
 
 ## Linux 4.x: The kernel officially dropped Docker support
 
-This is where the article goes from factual to a bit of a flame of Docker. Yes aufs was not accepted into the mainline linux kernel because it's code was described as "dense, unreadable, and uncommented"[1], but it's still supported by Docker and available for every kernel version I've tried to install it on. It's also one of only two filesystems listed as "production ready" on Docker's website[2]. Therefore the statement:
+This is where the article goes from factual to a bit of a flame of Docker. Yes aufs was not accepted into the mainline linux kernel because it's code was described as "dense, unreadable, and uncommented"[2], but it's still supported by Docker and available for every kernel version I've tried to install it on. It's also one of only two filesystems listed as "production ready" on Docker's website[3]. Therefore the statement:
 
 > There is no unofficial patch to support it, there is no optional module, there is no backport whatsoever, nothing. AUFS is entirely gone.
 
@@ -67,8 +69,7 @@ Plenty of companies are using these today in Production. Plus there's also AWS's
 There are a number of valid problems with Docker raised by the author.
 
 - Docker API changes with every release.
-- Changes are often not backwards compatible, making upgrades hard.
-- Support for releases is short, requiring users to upgrade to fix bugs. However this is painful due to lack of backwards compatibility.
+- Support for releases is short, requiring users to upgrade to fix bugs.
 - Docker maintained services are not stable.
 - The state of orchestration for Docker is still relatively immature.
 - Transitioning to any new technology is hard. Especially when that technology requires a shift in how you architect and build systems.
@@ -83,5 +84,10 @@ I was not intending in anyway to be condescending to the author of the original 
 
 My intent was to show how I consider Docker to be production ready for our organisation (because we are using it), but to concede there are a number of problems with it. Production ready means different things to different organisations, it's important that each makes their own decision. I'm not trying to advocate that Docker is production ready for everybody, it's not. I am trying to give people all the information they need to make the decision themselves by correcting some of the factual innacuracies and misleading statements in Thehftguy's post.
 
-[1]: https://lwn.net/Articles/327738/
-[2]: https://docs.docker.com/engine/userguide/storagedriver/selectadriver/
+## Edit 2 6/11/16
+
+An earlier version of this blog post implied that the Docker API was not backwards compatible. Docker were at pains to point out to me this is not true, so the post has been changed to clarify that position.
+
+[1]: https://github.com/docker/docker/issues/20424
+[2]: https://lwn.net/Articles/327738/
+[3]: https://docs.docker.com/engine/userguide/storagedriver/selectadriver/
