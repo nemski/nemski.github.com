@@ -75,7 +75,7 @@ There are a number of valid problems with Docker raised by the author.
 
 But I'm optimistic that it's possible to overcome these all in the short and long term.
 
-## Edit 6/11/16
+## Edit 2016-11-06
 
 Lots of feedback on reddit about my post, which I love. There were a couple of points I probably didn't make clear enough so here goes.
 
