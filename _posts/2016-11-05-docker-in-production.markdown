@@ -29,7 +29,7 @@ I was surprised I'd never experienced this issue before. That being said I've be
 
 ## Linux 4.x: The kernel officially dropped Docker support
 
-This is where the article goes from factual to a bit of a flame of Docker. Yes aufs was not accepted into the mainline linux kernel because it's code was described as "dense, unreadable, and uncommented"[2], but it's still supported by Docker and available for every kernel version I've tried to install it on. It's also one of only two filesystems listed as "production ready" on Docker's website[3]. Therefore the statement:
+This is where the article goes from factual to a bit of a flame of Docker. Yes aufs was not accepted into the mainline linux kernel because its code was described as "dense, unreadable, and uncommented"[2], but it's still supported by Docker and available for every kernel version I've tried to install it on. It's also one of only two filesystems listed as "production ready" on Docker's website[3]. Therefore the statement:
 
 > There is no unofficial patch to support it, there is no optional module, there is no backport whatsoever, nothing. AUFS is entirely gone.
 
