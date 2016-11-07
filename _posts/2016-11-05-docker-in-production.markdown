@@ -49,7 +49,7 @@ As a lot of people say in this industry, boring tech is what makes money. This i
 
 ## Banned from the DBA
 
-Again, well accepted principle that "thou shalt not run a database inside a container". Don't do it, end of story.
+Again, well accepted principle that ["thou shalt not run a database inside a container"](/2016/11/07/thou-shalt-not-run-a-database-inside-a-container/). Don't do it, end of story.
 
 ## A Personal Opinion
 
