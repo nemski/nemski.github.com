@@ -4,7 +4,7 @@ title: "Thou shalt not run a database inside a container"
 date: 2016-11-07 00:00:00
 ---
 
-So my last blog post, [Docker in Production: A retort](http://patrobinson.github.io/2016/11/05/docker-in-production/), generated a lot of comments. One of them was "Why shouldn't you run a Database in Docker?" I've seen this questions a few times, but rarely reply because it's such a long answer. But here goes.
+So my last blog post, [Docker in Production: A retort](/2016/11/05/docker-in-production/), generated a lot of comments. One of them was "Why shouldn't you run a Database in Docker?" I've seen this questions a few times, but rarely reply because it's such a long answer. But here goes.
 
 ## Kelsey Hightower told you not to
 
