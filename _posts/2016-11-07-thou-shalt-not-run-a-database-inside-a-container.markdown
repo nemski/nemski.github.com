@@ -20,7 +20,7 @@ If you cannot determine what is the master node, which involves some kind of con
 
 There isn't a well respected solution for how to do volume management for Docker clusters right now. Some people use NFS, but it lacks any kind of locking support on files (see [this blog](http://0pointer.de/blog/projects/locking.html) for more details on linux file lock support). So you cannot guarentee that another system is not writing to your files.
 
-GlusterFS is recent successor to NFS, that offers much better performance, clustering and scalability. However it has several known issues that render locking unreliable.[1](https://bugzilla.redhat.com/show_bug.cgi?id=1194546) [2](https://bugzilla.redhat.com/show_bug.cgi?id=1287099)
+GlusterFS is a recent successor to NFS, that offers much better performance, clustering and scalability. However it has several known issues that render locking unreliable.[1](https://bugzilla.redhat.com/show_bug.cgi?id=1194546) [2](https://bugzilla.redhat.com/show_bug.cgi?id=1287099)
 
 ## You lied to us! I can total run my NoSQL database in Docker
 
