@@ -6,6 +6,8 @@ date: 2016-11-07 00:00:00
 
 So my last blog post, [Docker in Production: A retort](/2016/11/05/docker-in-production/), generated a lot of comments. One of them was "Why shouldn't you run a Database in Docker?" I've seen this questions a few times, but rarely reply because it's such a long answer. But here goes.
 
+EDIT: I've been made aware I'm not being clear that I am referring to running a database in a container management solution, like Kubernetes. The issues laid out below don't relate to just running your database in docker with no shared storage or ability to start it automatically on a different node.
+
 ## Kelsey Hightower told you not to
 
 He's a smart guy, he's worked at CoreOS and now works at Google. He has done some fantastic talks on Docker, Kubernetes and System Administration in general. [Here's him talking about it](https://youtu.be/Nosa5-xcATw?t=1080)
