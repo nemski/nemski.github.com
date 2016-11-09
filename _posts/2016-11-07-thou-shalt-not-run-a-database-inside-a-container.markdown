@@ -35,3 +35,11 @@ Now you know why there is significant anxiety to running databases in Docker, yo
 If you find yourself wanting to learn more I highly recommend Pintrest's blog on [how they sharded their MySQL Cluster](https://engineering.pinterest.com/blog/sharding-pinterest-how-we-scaled-our-mysql-fleet). They use Zookeeper, similar to etcd, to keep the configuration of which data lives in which MySQL database. This provides a highly available, consistent store. But they still recommend you "only read/write to the master... It simplifies everything and avoids lagged replication bugs."
 
 I've yet to see a blog post about somebody containerising their MySQL server and how it went really well.
+
+## EDIT: Some solutions to the problems I have presented here
+
+Some people have pointed out a couple of solutions to the problem presented here. One is the Kubernetes [PetSet](http://kubernetes.io/docs/user-guide/petset/) concept. While still in Alpha (so obviuosly not fit for Production), this looks to be solving the exact problem of ensuring one and only one master exists at any one time.
+
+Uber also [blogged about their dockerizing of MySQL](https://eng.uber.com/dockerizing-mysql/) which is a very similar solution to the Kubernetes approach. They are defining the cluster topology up front, which guarentees a single master. They don't talk about how they generate the master, but since that obviously comes from another source it's likely highly consistent.
+
+So today we still can't run Docker inside a container cluster, but there are some good solutions on the roadmap.
