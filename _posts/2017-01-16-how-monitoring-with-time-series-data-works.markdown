@@ -28,7 +28,7 @@ It's important, especially when developing instrumentation, dashboards and repor
 
 ## Push vs. Pull
 
-The inevitable question that comes about when implementing a new monitoring tool is "do we pull the data from its source, or push it in". My preference is to push the data because, while Google advocate for a pull mechanism (and hence that's what Promtheus provides), the complexity that adds is only worth it when you scale above tens of thousands of devices. Not having to persist the state in a, potentially ephemeral, device has many benifits.
+The inevitable question that comes about when implementing a new monitoring tool is "do we pull the data from its source, or push it in". My preference is to push the data because, while Google advocate for a pull mechanism (and hence that's what Promtheus provides), the complexity that adds is only worth it when you scale above tens of thousands of devices. Not having to persist the state in a, potentially ephemeral, device has many benefits.
 
 ## Data types
 
@@ -85,10 +85,14 @@ patrobinson.github.com.get.load_time./:290|ms|@1
 
 We produce the following entry for that sample period:
 
-| Namespace     | Count | Sum  | Avg | Min | Max | Last |
-| ------------- |:-----:|:----:|:---:|:---:|:---:| ----:|
-| patrobinson.github.com.get.load_time./ | 5 | 1593 | 318.6 | 169 | 502 | 290 |
+|---
+| Namespace     || Count || Sum  || Avg || Min || Max || Last |
+| :- | :-: | :-: | :-: | :-: | :-: | :-: |
+| patrobinson.github.com.get.load_time./ || 5 || 1593 || 318.6 || 169 || 502 || 290 ||
+|===
 
-# In Summary: Optimise for the most common use case first
+# In Summary
+
+Optimise for the most common use case first.
 
 Time series monitoring tools are extremely efficient and provide rich features for a variety of use cases. While Graphite has been a staple for many years, a lot of new tools have been released that support multi-dimensional tagging, alerting and increased scalability. 
