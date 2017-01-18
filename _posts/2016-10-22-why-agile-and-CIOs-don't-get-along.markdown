@@ -32,7 +32,7 @@ Speaking of failure, my favour quote from Marc is:
 
 But they do, all the time! How many times have we seen a bank or airline's IT system go down for hours or days at a time? How many times have we seen a government project fail and blow out costs by billions of dollars? This is CIO kool-aid at its best.
 
-I work in an organisation has hundreds of employees, thousands of people world wide that rely on our company to put food on the table and processes hundreds of thousands of dollars in transactions a day. Oh and we practice Agile. Corporations can learn from accepting failure, it's inevitable. Only when we embrace failure can we learn from it. Google talk about it in their book "Site Reliability Engineering", which I highly recommend reading, and they run the most popular website in the world.
+I work in an organisation who has hundreds of employees, thousands of people world wide that rely on our company to put food on the table and processes hundreds of thousands of dollars in transactions a day. Oh and we practice Agile. Corporations can learn from accepting failure, it's inevitable. Only when we embrace failure can we learn from it. Google talk about it in their book "Site Reliability Engineering", which I highly recommend reading, and they run the most popular website in the world.
 
 There's no doubt that Agile is extremely hard to retro-fit into a corporate environment. I wouldn't know where to begin, but the defeatist attitude that "it won't work because we're more important than the companies that do practice Agile" is complete drivel and nonsense. Plenty of successful startups have continued to grow and succeed while still practicing Agile.
 To Marc's credit, he at least tries to offer an alternative:
