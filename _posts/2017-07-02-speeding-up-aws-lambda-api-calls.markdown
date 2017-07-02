@@ -26,6 +26,7 @@ In this example we have a class method that retrieves some data from a Dynamo ta
     def get_account(cls, account_number):
       dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
       table = dynamodb.Table("accounts")
+      return table.get_item(Key={'account_number': account_number})['Item']
 ```
 
 The cache lasts for 5 minutes, ensuring we eventually retrieve an up to date value if it does change. This not only speeds up our function by several hundred milliseconds, it allows us to keep our DynamoDB Provisioned Reads lower and hence our costs lower.
