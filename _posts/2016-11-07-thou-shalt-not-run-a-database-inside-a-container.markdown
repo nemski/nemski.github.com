@@ -43,3 +43,5 @@ Some people have pointed out a couple of solutions to the problem presented here
 Uber also [blogged about their dockerizing of MySQL](https://eng.uber.com/dockerizing-mysql/) which is a very similar solution to the Kubernetes approach. They are defining the cluster topology up front, which guarentees a single master. They don't talk about how they generate the master, but since that obviously comes from another source it's likely highly consistent.
 
 So today we still can't run Docker inside a container cluster, but there are some good solutions on the roadmap.
+
+Check out my [follow up post](http://patrobinson.github.io/2017/12/16/should-i-run-a-database-in-kubernetes/) on this ∂subject.
