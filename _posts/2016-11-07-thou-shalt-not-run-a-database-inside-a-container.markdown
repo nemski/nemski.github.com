@@ -20,7 +20,7 @@ If you cannot determine what is the master node, which involves some kind of con
 
 ## Volume management for Docker is still in it's infancy
 
-There isn't a well respected solution for how to do volume management for Docker clusters right now. Some people use NFS, but it lacks any kind of locking support on files (see [this blog](http://0pointer.de/blog/projects/locking.html) for more details on linux file lock support). So you cannot guarentee that another system is not writing to your files.
+There isn't a well respected solution for how to do volume management for Docker clusters right now. Some people use NFS, but it lacks any kind of locking support on files (see [this blog](http://0pointer.de/blog/projects/locking.html) for more details on linux file lock support). So you cannot guarantee that another system is not writing to your files.
 
 GlusterFS is a recent successor to NFS, that offers much better performance, clustering and scalability. However it has several known issues that render locking unreliable.[1](https://bugzilla.redhat.com/show_bug.cgi?id=1194546) [2](https://bugzilla.redhat.com/show_bug.cgi?id=1287099)
 
@@ -38,9 +38,9 @@ I've yet to see a blog post about somebody containerising their MySQL server and
 
 ## EDIT: Some solutions to the problems I have presented here
 
-Some people have pointed out a couple of solutions to the problem presented here. One is the Kubernetes [PetSet](http://kubernetes.io/docs/user-guide/petset/) concept. While still in Alpha (so obviuosly not fit for Production), this looks to be solving the exact problem of ensuring one and only one master exists at any one time.
+Some people have pointed out a couple of solutions to the problem presented here. One is the Kubernetes [PetSet](http://kubernetes.io/docs/user-guide/petset/) concept. While still in Alpha (so obviously not fit for Production), this looks to be solving the exact problem of ensuring one and only one master exists at any one time.
 
-Uber also [blogged about their dockerizing of MySQL](https://eng.uber.com/dockerizing-mysql/) which is a very similar solution to the Kubernetes approach. They are defining the cluster topology up front, which guarentees a single master. They don't talk about how they generate the master, but since that obviously comes from another source it's likely highly consistent.
+Uber also [blogged about their dockerizing of MySQL](https://eng.uber.com/dockerizing-mysql/) which is a very similar solution to the Kubernetes approach. They are defining the cluster topology up front, which guarantees a single master. They don't talk about how they generate the master, but since that obviously comes from another source it's likely highly consistent.
 
 So today we still can't run Docker inside a container cluster, but there are some good solutions on the roadmap.
 
